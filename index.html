@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявка на подключение</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=29954df2-70a5-4786-a0ad-417a1b83ef95&lang=ru_RU" type="text/javascript"></script>
+    <div class="header-content">
+      <h1>Оставьте заявку на подключение</h1>
+      <p>
+        Если Вашего дома нет в списке, значит, Вам сейчас нельзя подключить наш скоростной домашний интернет по оптоволокну.
+        <br>
+        Но это временно. Мы каждый год строим и расширяем сеть, чтобы как можно больше людей смогли пользоваться «Интернет Дома».
+        <br>
+        Оставьте заявку, и мы рассмотрим Ваш адрес. Если заявок из Вашего ЖК будет много, мы скорректируем свои планы и пересмотрим график работ.
+      </p>
+    </div>
+  </header>
+  <main>
+    <form id="applicationForm">
+      <label for="city">Город:</label>
+      <select id="city" name="city" required>
+        <option value="">Выберите город</option>
+        <option value="Алматы">Алматы</option>
+        <option value="Астана">Астана</option>
+        <option value="Костанай">Костанай</option>
+      </select>
+      <label for="fullName">ФИО:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Введите ваше ФИО" required>
+      <label for="contact">Контактный номер:</label>
+      <input type="tel" id="contact" name="contact" placeholder="Введите ваш номер телефона" required>
+      <label for="address">Адрес локации:</label>
+      <input type="text" id="address" name="address" placeholder="Выберите адрес на карте" readonly required>
+      <button type="submit">Оставить заявку</button>
+    </form>
+    <div id="map"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
